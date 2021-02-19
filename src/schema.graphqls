@@ -1,0 +1,17 @@
+directive @client on FIELD
+
+type Query {
+    member(id: ID!): Member
+    organization(id: ID): Organization
+}
+
+type Member {
+    id: ID!
+    fullName: String
+    organization: Organization
+}
+
+type Organization {
+    id: ID!,
+    displayName: String
+}
